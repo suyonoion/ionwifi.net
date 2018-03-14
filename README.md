@@ -76,6 +76,11 @@ jQuery(function(){jQuery('#%u_username%').qrcode({"render": 'img',"size": 100,"m
 
 ```
 
+#Template Login Page Hotspot
+Screenshoot :
+
+![alt tag](https://raw.githubusercontent.com/suyonoion/ionwifi.net/master/loginvoucher/login-voucher.png)
+
 #Sumber Referensi dan Credit :
 
 1.	Suyonoion
