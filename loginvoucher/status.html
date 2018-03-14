@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>STATUS</title>			
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="en" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<style type="text/css">
+body{
+margin:0;
+color:#009933;
+padding:10px 8px 8px;
+font-size:15px;
+font-family:Tahoma,Arial,sans-serif;
+background-color:#fff
+}
+
+.kangndo1{
+width:auto;
+min-width:500px;
+max-width:980px;
+border-spacing:0;
+border-collapse:collapse;
+margin:80px auto;
+padding:0
+}
+
+#kangndo2{
+padding:10px 10px 0;
+border:1px solid #009933;
+border-bottom-width:0;
+border-radius:7px 7px 0 0;
+background-color:#009933
+}
+
+#kangndo3{
+text-align:center;
+padding:10px;
+border:1px solid #009933;
+border-bottom-width:0;
+background-color:#f4f4f4;
+border-radius:5px 5px 0 0
+}
+
+.kangndo4{
+color:#009933;
+font-size:36px;
+font-family:time new roman
+}
+
+#kangndo5{
+white-space:nowrap;
+background-color:#009933
+}
+
+.kangndo6{
+color:#fff;
+font-size:24px;
+padding:5px 0;
+text-align:center
+}
+
+#kangndo7{
+padding:0 10px 10px;
+border:1px solid #009933;
+border-top-width:0;
+border-radius:0 0 7px 7px;
+background-color:#009933
+}
+
+#kangndo8{
+padding:30px;
+border:1px solid #ececec;
+border-top-width:0;
+background-color:#f4f4f4;
+border-radius:0 0 7px 7px
+}
+
+#kangndo9{
+text-align:center;
+display:block
+}
+.kangndo10{
+min-width:70%;
+display:inline-block;
+color:#fff!important;
+padding:10px 12px;
+margin:6px;
+font-size:14px;
+font-weight:700;
+text-align:center;
+white-space:nowrap;
+vertical-align:middle;
+cursor:pointer;
+border:1px solid #009933;
+border-radius:4px;
+box-shadow:0 1px 0 rgba(255,255,255,0.15) inset,0 1px 1px rgba(0,0,0,0.075);
+text-shadow:0 -1px 0 rgba(0,0,0,0.2);
+background-color:#009933
+}
+
+.kangndo10:hover{
+background-color:#009933
+}
+
+.kangndo11{
+min-width:260px;
+margin:0 0 5px
+}
+
+input{
+border:1px solid #b2bcc0;
+border-radius:4px;
+padding:12px;
+box-shadow:0 0 5px #E7E7E7 inset
+}
+
+@media only screen and (max-width: 800px){
+.kangndo1{
+min-width:60%;
+max-width:none;
+border-spacing:0;
+border-collapse:collapse;
+margin:0 auto
+}
+.kangndo6{
+font-size:1.2em;
+padding:.25em
+}
+.kangndo11{
+min-width:60%;
+width:auto
+}
+#kangndo8{
+padding:1em
+}
+.kangndo4{
+font-size:1.2em;
+padding:.25em
+}
+}
+.sisa{
+font-size:21px;
+color:red;
+font-weight:bold;
+}
+
+.kodevoucher{
+font-size:21px;
+color:green;
+font-weight:bold;
+text-align: center;
+}
+</style>
+</head>
+<body>
+	
+<table class="kangndo1">
+<tr>	
+<td>
+<div id="kangndo2">
+<div id="kangndo3">	
+
+<!-- HEADER -->						
+<span class="kangndo4"><img src="header.png" alt="ionwifi.net" width="100%" height="100%" longdesc="http://ionwifi.net"></span>			
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td id="kangndo5">
+<div class="kangndo6">
+<img src="lock.png" alt="" align="left"/><img src="lock.png" alt="" align="right"/>Internet Murah Tanpa Kuota
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div id="kangndo7">
+<div id="kangndo8">
+
+<center>
+<table>
+<tr>
+<td align="center" valign="middle">
+<table border="1" class="tabula">
+$(if login-by == 'trial')
+	<br><div style="text-align: center;">Selamat Datang ! Terimakasih Ya Sudah Mau Nyobain WiFian Dimari :)</div><br>
+$(elif login-by != 'mac')
+	<br><b>KODE VOUCHER ANDA ADALAH</b><br/>
+	<div class="kodevoucher">$(username)!</div><br>
+$(endif)
+	<tr><td align="left">IP address </td><td>$(ip)</td></tr>
+	<tr><td align="left">Bytes up/down </td><td>$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
+	$(if session-time-left)
+	<tr><td align="left">Connected / Left </td><td>$(uptime) / $(session-time-left)</td></tr>
+	<hr><div class="sisa">Sisa Paket : <br/>$(session-time-left)<hr></div>
+$(else)
+	<tr><td align="left">Connected </td><td>$(uptime)</td></tr>
+$(endif)
+$(if blocked == 'yes')
+	<tr><td align="left">Status </td><td><div style="color: #FF8080">
+<a href="$(link-advert)" target="hotspot_advert">advertisement</a> required</div></td>
+$(elif refresh-timeout)
+	<tr><td align="left">Status refresh </td><td>$(refresh-timeout)</td>
+$(endif)
+
+</table>
+</center>
+$(if login-by-mac != 'yes')
+<br>
+<!-- user manager link. if user manager resides on other router, replace $(hostname) by its address
+<button onclick="document.location='http://$(hostname)/user?subs='; return false;">status</button>
+<!-- end of user manager link -->
+$(endif)
+</form>
+
+</td>
+</table>
+<br/>
+<!-- CONTACT 
+Hubungi :<br/><b>Mas Yon / Suyono</b>
+<br/>087 727 30 66 70-->
+<hr/>
+<br/><a class="kangndo10" href="https://www.google.co.id/">START</a>
+<br/><a class="kangndo10" href="logout?erase-cookie=true">LOGOUT</a>
+</center>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>	
+</html>

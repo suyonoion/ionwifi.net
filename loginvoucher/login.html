@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Log In - Voucher</title>			
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="en" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+		
+			$('#password').keyup(function(){			
+			var password=$('#password').val();
+			var x = password.split('');
+			var y = x[0];
+			if (y == '2'){
+			$('#Tdurasi').text('2 Jam');
+			$('#Tbiaya').text('2000');
+			} else if (y == '3'){
+			$('#Tdurasi').text('3 Jam');
+			$('#Tbiaya').text('3000');
+			} else if (y == '5'){
+			$('#Tdurasi').text('5 Jam');
+			$('#Tbiaya').text('5000');
+			} else {
+			$('#Tdurasi').text('0');
+			$('#Tbiaya').text('0000');
+			}
+			});
+		
+		});
+		
+        </script>
+		<style type="text/css">
+		#pas{
+		display:inline;
+		width:100%;
+		height:100%;
+		}
+		</style>
+</head>
+
+<body>
+$(if chap-id)
+		<form name="sendin" action="$(link-login-only)" method="post">
+			<input type="hidden" name="username" />
+			<input type="hidden" name="password" />
+			<input type="hidden" name="dst" value="$(link-orig)" />
+			<input type="hidden" name="popup" value="true" />
+		</form>
+		
+		<script type="text/javascript" src="/md5.js"></script>
+		<script type="text/javascript">
+		<!--
+			function doLogin() {
+			document.sendin.username.value = document.login.username.value;
+			document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+			document.sendin.submit();
+			return false;
+			}
+		//-->
+		</script>
+	$(endif)
+	
+	$(if error)
+	<center>
+	<div style="width:360px;color: #FF8080; font-size: 14px;background:#FF3">$(error)</div>
+	</center>
+	$(endif)
+	
+<div class="pas">
+<form name="login" action="$(link-login-only)" method="post"
+$(if chap-id) onSubmit="return doLogin()" $(endif)>
+<input style="text-transform: lowercase;" id="username" name="username" type="hidden" value="$(username)" placeholder="username"/>	
+<table align="center" style="background-repeat:no-repeat;" width="360" height="231" border="0" background="formlogin.png">
+  <tr>
+    <td width="164">&nbsp;</td>
+    <td width="126">&nbsp;</td>
+    <td width="146">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><input id="password" style="text-transform: lowercase;margin:60px 0px 0px 19px;width:100px;" type="text" name="password" placeholder="kode voucher" />
+      <br />
+      <p id="Tdurasi" style="margin:12px 0px 0px 19px;width:129px;color:red;" readonly="readonly"><strong>0</strong></p>    </td>
+    <td><input id="tombol" style="margin:27px 0px 0px -32px;width:50px;opacity:0.5;filter: alpha(opacity=50);" type="submit" name="Submit" value="Go" /></td>
+    <td>
+	
+	<button type="submit" style="margin:64px 0px 0px -26px;width:100px;height:100px;opacity:0.5;filter: alpha(opacity=50);"><a href="http://ionwifi.net/download/qrcodescanner.apk" target="_blank">Download QRCODE SCANNER</a></button>
+
+	</td>
+  </tr>
+  <tr>
+    <td><p id="Tbiaya" style="font-size:23px;margin:-10px 0px 0px 15px;width:129px;color:#227C6E;" readonly="readonly">0</p></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</form>
+</div>
+$(if trial == 'yes') 
+<div style="margin-top: 7px; color: #090; font-size: 9px; text-align: center;">
+<p style="padding: 5px; font-size: 11px;">Percobaan gratis tersedia, <a style="color: #FF8080"href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">KLIK DISINI GRATIS</a>
+</p>
+</div>
+.$(endif)
+<script type="text/javascript">
+var input2 = document.getElementById('username');
+var input1 = document.getElementById('password');
+var updateInputs = function () {
+input2.value = input1.value;
+}
+if (input1.addEventListener) {
+input1.addEventListener('keyup', function () {
+updateInputs();
+});
+} else if (input1.attachEvent) { // support IE
+input1.attachEvent('onkeyup', function () {
+updateInputs();
+});
+}
+</script>
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+</body>
+</html>
