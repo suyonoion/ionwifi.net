@@ -8,7 +8,7 @@ ScreenShoot Print :
 ![alt tag](https://raw.githubusercontent.com/suyonoion/ionwifi.net/master/ss-print.png)
 
 Usage :
-<script src="https://gist.github.com/suyonoion/fc9db07b5b80e4b3520286502f2544b5.js"></script>
+![alt tag](<script src="https://gist.github.com/suyonoion/fc9db07b5b80e4b3520286502f2544b5.js"></script>)
 
 Sumber Referensi dan Credit :
 
