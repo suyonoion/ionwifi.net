@@ -3,8 +3,10 @@ Generate voucher QRCODE
 
 #Demo HTML : https://suyonoion.github.io/ionwifi.net/demo/
 
-#ScreenShoot Print :
+#Penampakan
+![alt tag](https://raw.githubusercontent.com/suyonoion/ionwifi.net/master/penampakan.png)
 
+#ScreenShoot Print :
 ![alt tag](https://raw.githubusercontent.com/suyonoion/ionwifi.net/master/ss-print.png)
 
 #Usage :
