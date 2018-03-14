@@ -1,14 +1,15 @@
 # Userman Template Voucher QR CODE auto login
 Generate voucher QRCODE
 
-Demo HTML : https://suyonoion.github.io/ionwifi.net/demo/
+#Demo HTML : https://suyonoion.github.io/ionwifi.net/demo/
 
-ScreenShoot Print :
+#ScreenShoot Print :
 
 ![alt tag](https://raw.githubusercontent.com/suyonoion/ionwifi.net/master/ss-print.png)
 
-Usage :
-'''
+#Usage :
+```
+
 <!-------- HEADER ---------> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -68,16 +69,17 @@ jQuery(function(){jQuery('#%u_username%').qrcode({"render": 'img',"size": 100,"m
 <!-------- BREAK ---------> 
 <p class="noprint" style="font-size: 10px">   ................ page break ................ </p>
 <p class="pagebreak">&nbsp;</p>
-'''
 
-Sumber Referensi dan Credit :
+```
+
+#Sumber Referensi dan Credit :
 
 1.	Suyonoion
 https://facebook.com/suyono.ion
 2.	Kangndo.Com
 https://www.kangndo.com/2015/01/01/userman-template-kangndo-v-5-qr-code-auto-login/
 
-Terimakasih kepada :
+#Terimakasih kepada :
 1.	Allah Subhanahu wa Ta’ala
 2.	Keluarga
 3.	Jajaran Admins dan members Group Facebook 
